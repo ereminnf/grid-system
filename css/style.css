@@ -25,12 +25,12 @@
 }
 /* === Настройки страницы === */
 *,::after,::before{
-   box-sizing: border-box;
+   box-sizing: border-box;   
 }
 html, body{
    background: #fff;
    color: #343434;
-   font-family: 'PT Sans', Arial, Roboto, 'Helvetica Neue', sans-serif;
+   font-family: 'PT Sans', sans-serif, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
    -webkit-font-smoothing: subpixel-antialiased !important;
    -webkit-backface-visibility: hidden;
    -moz-backface-visibility:    hidden;
@@ -40,7 +40,7 @@ html, body{
    line-height: 1.5;
    text-align: left;      
 }
-/* === заголовки === */
+/* === заголовки и параграфы === */
 h1{
    font-size: 2.5rem;
 }
