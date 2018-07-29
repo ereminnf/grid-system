@@ -27,7 +27,10 @@
 *,::after,::before{
    box-sizing: border-box;   
 }
-html, body{
+html{
+   font-size: 16px;
+}
+body{
    background: #fff;
    color: #343434;
    font-family: 'PT Sans', sans-serif, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -36,7 +39,6 @@ html, body{
    -moz-backface-visibility:    hidden;
    -ms-backface-visibility:     hidden; 
    font-weight: 400;
-   font-size: 15px;
    line-height: 1.5;
    text-align: left;      
 }
@@ -310,6 +312,7 @@ p{
       max-width: 920px;
    } 
 
+   body{font-size: .95rem;}
    /* === Сетка === */
    .col-md-1{
       width: calc(8.33% - 30px);
@@ -425,11 +428,13 @@ p{
 
 /* === Брейкпоинт на 576px === */
 @media screen and (max-width: 575.98px){
+   
    /* === фиксированный контейнер === */
    .container{
       max-width: 520px;
    }
 
+   body{font-size: .9rem;}
    /* === по умолчанию 100% === */
    /* === Сетка === */
    .col{
