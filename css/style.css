@@ -24,6 +24,9 @@
     font-style: italic;
 }
 /* === Настройки страницы === */
+*,::after,::before{
+   box-sizing: border-box;
+}
 html, body{
    background: #fff;
    color: #343434;
