@@ -254,6 +254,11 @@ img{
 .t-truncate{
    text-overflow: ellipsis;
    white-space: nowrap;
+   overflow: hidden;
+   flex-grow: 1;
+}
+.truncate-body{
+   min-width: 0;
 }
 
 /* === Списки === */
