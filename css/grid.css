@@ -126,8 +126,8 @@ img{
 /* === элемент === */
 .col{
    width: calc(8.33% - 30px);
-   flex-grow: 1; 
-   margin: 15px;
+   /*flex-grow: 1; */
+   margin: 0px 15px;
    word-wrap: break-word;
    box-sizing: border-box; 
    display: flex;
@@ -366,15 +366,15 @@ img{
 
 /* ================== Брейкпоинты ================== */
 /* === Брейкпоинт на 1200px === */
-@media screen and (min-width: 1200px){
+/*@media screen and (min-width: 1200px){
    .col{
       flex-grow: 1;
-      width: calc(8.33% - 30px);/* уменьшаем тк увеличился из за margin */
+      width: calc(8.33% - 30px);
    }
-}
+}*/
 
-/* === Брейкпоинт на 1200px === */
-@media screen and (max-width: 1199.98px){
+/* === Брейкпоинт на 10000px === */
+@media screen and (max-width: 10000px){
    /* === фиксированный контейнер === */
    .container{
       max-width: 1120px;
