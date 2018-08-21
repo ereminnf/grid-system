@@ -1,3 +1,2 @@
-#folder other
-index.html
-img/
+dist
+node_modules

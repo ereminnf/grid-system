@@ -1,73 +1,93 @@
-/* === подключение шрифтов === */
-@font-face{
-    font-family: 'PT Sans';
-    src: url('../fonts/PT_Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+@import (reference) "_font.less";
+@import (reference) "_var.less";
+
+// ============================
+// Разметка
+// ============================
+
+.container(@container-width: @container-width; @offset: @offset / 2;){
+   margin: 0 auto;
+   max-width: @container-width;
+   padding: 0 @offset;
+   box-sizing: border-box;
 }
-@font-face{
-    font-family: 'PT Sans';
-    src: url('../fonts/PT_Regular_Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
+.container-fluid(@container-width: @container-fluid-width; @offset: @offset / 2;){
+   margin: 0 auto;
+   max-width: @container-width;
+   padding: 0 @offset;
+   box-sizing: border-box;
 }
-@font-face{
-    font-family: 'PT Sans';
-    src: url('../fonts/PT_Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+.row(@offset: @offset / 2;){
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   align-items: stretch;
+   box-sizing: border-box;
+   margin: 0 -@offset;
 }
-@font-face{
-    font-family: 'PT Sans';
-    src: url('../fonts/PT_Bold_Italic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
+.col(@offset: @offset / 2;){
+   width: calc(8.33% - 30px);
+   /*flex-grow: 1;*/ 
+   margin: @offset;
+   word-wrap: break-word;
+   box-sizing: border-box; 
+   display: flex;
+   flex-direction: column;   
 }
-/* === Настройки страницы === */
-*,::after,::before{
-   box-sizing: border-box;   
+
+.size(@size: 1; @offset: @offset;){
+   width: calc((8.33% * @size) - @offset);
 }
-html{
-   font-size: 16px;
+.size-lg(@size: 1; @offset: @offset; @breakpoint-lg: @breakpoint-lg;){
+   @media screen and (max-width: @breakpoint-lg) {
+      width: calc((8.33% * @size) - @offset);
+   }   
 }
-body{
-   background: #fff;
-   color: #343434;
-   font-family: 'PT Sans', sans-serif, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-   -webkit-font-smoothing: subpixel-antialiased !important;
-   -webkit-backface-visibility: hidden;
-   -moz-backface-visibility:    hidden;
-   -ms-backface-visibility:     hidden; 
-   font-weight: 400;
-   line-height: 1.5;
-   text-align: left;         
+.size-md(@size: 1; @offset: @offset; @breakpoint-md: @breakpoint-md;){
+   @media screen and (max-width: @breakpoint-md) {
+      width: calc((8.33% * @size) - @offset);
+   }   
 }
+.size-sm(@size: 1; @offset: @offset; @breakpoint-sm: @breakpoint-sm;){
+   @media screen and (max-width: @breakpoint-sm) {
+      width: calc((8.33% * @size) - @offset);
+   }   
+}
+.size-xs(@size: 1; @offset: @offset; @breakpoint-xs: @breakpoint-xs;){
+   @media screen and (max-width: @breakpoint-xs) {
+      width: calc((8.33% * @size) - @offset);
+   }   
+}
+
+// ============================
+// Адаптивка
+// ============================
+.lg(@params; @breakpoint-lg: @breakpoint-lg;){
+    @media screen and (max-width: @breakpoint-lg) {
+        @params();
+    }
+}
+.md(@params; @breakpoint-md: @breakpoint-md;){
+    @media screen and (max-width: @breakpoint-md) {
+        @params();
+    }
+}
+.sm(@params; @breakpoint-sm: @breakpoint-sm;){
+    @media screen and (max-width: @breakpoint-sm) {
+        @params();
+    }
+}
+.xs(@params; @breakpoint-xs: @breakpoint-xs;){
+    @media screen and (max-width:@breakpoint-xs) {
+        @params();
+    }
+}
+
+
+
+.old-settings(){
 /* ================== Типографика ================== */
-h1{
-   font-size: 2.5rem;
-}
-h2{
-   font-size: 2rem;
-}
-h3{
-   font-size: 1.75rem;
-}
-h4{
-   font-size: 1.5rem;
-}
-h5{
-   font-size: 1.25rem;
-}
-h6{
-   font-size: 1rem;
-}
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .5rem;
-  margin-top: .5rem;
-  font-family: inherit;
-  line-height: 1.2;
-  color: inherit;
-}
+/*
 p{
    margin-top: .5rem;
    margin-bottom: .5rem;
@@ -86,34 +106,34 @@ abbr{
 }
 img{
    vertical-align: middle;
-}
+}*/
 
 /* ================== разметка ================== */
 /* === фиксированный контейнер === */
-.container{
+/*.container{
    margin: 0 auto;
    max-width: 1170px;
    padding: 0 15px;
    box-sizing: border-box;
-}
+}*/
 /* === Контейнер на всю ширину === */
-.container-fluid{
+/*.container-fluid{
    margin: 0 auto;
    width: 100%;
    padding: 0 15px;
    box-sizing: border-box;
-}
+}*/
 /* === Строка для элементов === */
-.row{
+/*.row{
    display: flex;
    flex-wrap: wrap;
    align-items: stretch;
    justify-content: space-between;
    box-sizing: border-box;
-   margin: 0 -15px;/* уменьшаем тк увеличился из за margin в элементе */
-}
+   margin: 0 -15px;
+}*/
 /* === элемент === */
-.col{
+/* .col{
    width: calc(8.33% - 30px);
    flex-grow: 1; 
    margin: 15px;
@@ -121,9 +141,9 @@ img{
    box-sizing: border-box; 
    display: flex;
    flex-direction: column;   
-}
+} */
 /* === горизонтальное вырвнивание === */
-.jc-start{
+/* .jc-start{
    justify-content: flex-start;
 }
 .jc-around{
@@ -134,10 +154,10 @@ img{
 }
 .jc-end{
    justify-content: flex-end;
-}
+} */
 
 /* === вертикальное вырвнивание === */
-.ai-start{
+/* .ai-start{
    align-items: flex-start;
 }
 .ai-center{
@@ -154,9 +174,9 @@ img{
 }
 .as-end{
    align-self: flex-end;
-}
+} */
 /* === Отступы === */
-.mt-auto{
+/* .mt-auto{
    margin-top: auto;
 }
 .mr-auto, .mx-auto{
@@ -239,10 +259,10 @@ img{
 }
 .ml-5{
    margin-left: 3rem;
-}
+} */
 
 /* === Текст === */
-.t-left{
+/* .t-left{
    text-align: left;
 }
 .t-center{
@@ -254,10 +274,10 @@ img{
 .t-truncate{
    text-overflow: ellipsis;
    white-space: nowrap;
-}
+} */
 
 /* === Списки === */
-.list-unstyle{
+/* .list-unstyle{
    padding-left: 0;
    list-style: none;
 }
@@ -270,10 +290,10 @@ img{
 }
 .inline-item:not(:last-child){   
    margin-right: .5rem;
-}
+} */
 
 /* === media === */
-.media{
+/* .media{
    display: flex;
 }
 .media-column{
@@ -281,10 +301,10 @@ img{
 }
 .media-body{
    flex-grow: 1;
-}
+} */
 
 /* === Изображения === */
-.img-fluid{
+/* .img-fluid{
    max-width: 100%;
    height: auto;
 }
@@ -296,10 +316,10 @@ img{
 }
 .rounded{
    border-radius: .25rem;
-}
+} */
 
 /* === float, display === */
-.float-left{
+/* .float-left{
    float: left;
 }
 .float-right{
@@ -307,10 +327,10 @@ img{
 }
 .d-block{
    display: block;
-}
+} */
 
 /* === таблицы === */
-.table{
+/* .table{
    width: 100%;
    max-width: 100%; 
    border-collapse: collapse;
@@ -324,9 +344,9 @@ img{
    color: #fff;
    background-color: #343434;
    border-color: #444444;
-}
+} */
 /*.table-dark .table-striped tbody tr:nth-of-type(odd){}*/
-.table .thead-light th{
+/* .table .thead-light th{
    color: #343434;
    background-color: #E6EBF0;
    border-color: #DCEBF0;
@@ -346,25 +366,25 @@ img{
    overflow-x: auto;
    -webkit-overflow-scrolling: touch;
    -ms-overflow-style: -ms-autohiding-scrollbar;  
-}
+} */
 
 /* ================== Брейкпоинты ================== */
 /* === Брейкпоинт на 1200px === */
-@media screen and (min-width: 1200px){
+/* @media screen and (min-width: 1200px){
    .col{
       flex-grow: 1;
-      width: calc(8.33% - 30px);/* уменьшаем тк увеличился из за margin */
+      width: calc(8.33% - 30px);
    }
-}
+} */
 
 /* === Брейкпоинт на 1200px === */
-@media screen and (max-width: 1199.98px){
-   /* === фиксированный контейнер === */
+/* @media screen and (max-width: 1199.98px){
+   === фиксированный контейнер ===
    .container{
       max-width: 1120px;
    }  
 
-   /* === Сетка === */
+   === Сетка ===
    .col-lg-1{
       width: calc(8.33% - 30px);
    }
@@ -402,7 +422,7 @@ img{
       width: calc(100% - 30px);
    }
 
-   /* === горизонтальное вырвнивание === */
+   === горизонтальное вырвнивание ===
    .j-start-lg{
       justify-content: flex-start;
    }
@@ -417,15 +437,15 @@ img{
    }
 }
 
-/* === Брейкпоинт на 992px === */
+=== Брейкпоинт на 992px ===
 @media screen and (max-width: 991.98px){
-   /* === фиксированный контейнер === */
+   === фиксированный контейнер ===
    .container{
       max-width: 920px;
    } 
 
    body{font-size: .95rem;}
-   /* === Сетка === */
+   === Сетка ===
    .col-md-1{
       width: calc(8.33% - 30px);
    }
@@ -463,7 +483,7 @@ img{
       width: calc(100% - 30px);
    }
 
-   /* === горизонтальное вырвнивание === */
+   === горизонтальное вырвнивание ===
    .j-start-md{
       justify-content: flex-start;
    }
@@ -478,14 +498,14 @@ img{
    }
 }
 
-/* === Брейкпоинт на 767px === */
+=== Брейкпоинт на 767px ===
 @media screen and (max-width: 767.98px){
-   /* === фиксированный контейнер === */
+   === фиксированный контейнер ===
    .container{
       max-width: 720px;
    }
 
-   /* === Сетка === */
+   === Сетка ===
    .col-sm-1{
       width: calc(8.33% - 30px);
    }
@@ -523,7 +543,7 @@ img{
       width: calc(100% - 30px);
    }
 
-   /* === горизонтальное вырвнивание === */
+   === горизонтальное вырвнивание ===
    .j-start-xs{
       justify-content: flex-start;
    }
@@ -538,17 +558,17 @@ img{
    }
 }
 
-/* === Брейкпоинт на 576px === */
+=== Брейкпоинт на 576px ===
 @media screen and (max-width: 575.98px){
    
-   /* === фиксированный контейнер === */
+   === фиксированный контейнер ===
    .container{
       max-width: 520px;
    }
 
    body{font-size: .9rem;}
-   /* === по умолчанию 100% === */
-   /* === Сетка === */
+   === по умолчанию 100% ===
+   === Сетка ===
    .col{
       width: calc(100% - 30px);
    }
@@ -589,7 +609,7 @@ img{
       width: calc(100% - 30px);
    }
 
-   /* === горизонтальное вырвнивание === */
+   === горизонтальное вырвнивание ===
    .j-start-xs{
       justify-content: flex-start;
    }
@@ -602,8 +622,8 @@ img{
    .j-end-xs{
       justify-content: flex-end;
    }
+} */
 }
-
 
 
 
