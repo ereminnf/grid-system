@@ -44,11 +44,27 @@
 
       .info2{
          .col(6);
+         .size-xs(12);
 
-         img{
+         > img{
             .rounded();
             .img-thumbnail();
             background-color: #ffa;
+         }
+
+         .info-block{
+            .media();
+
+            img{
+               .rounded();
+               .img-thumbnail();
+
+               min-width: 64px;
+            }
+
+            .info-block-body{
+               .media-body();
+            }
          }
       }
    }
