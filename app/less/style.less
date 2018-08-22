@@ -1,14 +1,15 @@
 @import "_grid.less";
 
 .news{
-   .container-fluid();
+   .container();
 
    .news-container{
       .row();
       .md({background-color: #bfaa;});
+      .align-lg(center);
+      .justify-lg(flex-end);
       background-color: #bba;
       justify-content: center;
-
 
       .news-block{
          .col();
@@ -19,6 +20,36 @@
          .size-xs(12);
          .sm({background-color: #aaf;});
          background-color: #ffaa;
+      }
+   }
+
+   .static{
+      .row();
+      .justify();
+      .justify-md(center);
+
+      .info{
+         .col(12);
+         .size-md(12);
+         .table-responsive();
+         
+         table{
+            .table();
+            .thead-dark();
+            .thead-light();
+            .table-border();
+            .table-border-bottom();
+         }
+      }
+
+      .info2{
+         .col(6);
+
+         img{
+            .rounded();
+            .img-thumbnail();
+            background-color: #ffa;
+         }
       }
    }
 }

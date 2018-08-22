@@ -66,3 +66,51 @@ h6,
   line-height: 1.2;
   color: inherit;
 }
+
+p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.lead {
+  font-size: inherit;
+  font-weight: 300;
+}
+
+.mark,
+mark {
+  padding: 0.1em;
+  background-color: #FAFAC8;
+}
+
+abbr {
+  cursor: help;
+  font-size: 0.9rem;
+}
+
+img {
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table td,
+th {
+  padding: 0.5rem;
+}
+
+table th {
+  color: #343434;
+  background-color: #E6EBF0;
+  border-color: #DCEBF0;
+}
+
+td,
+th {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #dee2e6;
+}
