@@ -2,12 +2,14 @@
 ::after,
 ::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background: #fff;
   color: #404040;
-  font-family: "PT Sans", sans-serif, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif, Roboto, 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: subpixel-antialiased !important;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
