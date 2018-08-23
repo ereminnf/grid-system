@@ -9,6 +9,8 @@
    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+
+      
    
       .news
          .news-container
@@ -55,6 +57,18 @@
                   .info-block-body
                      p.h5  Lorem ipsum dolor.
                      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora cum totam ad corporis doloribus suscipit!
+         .static
+            .info
+               button(class="popup-open" data-popup-id="popup-1") Открыть попап 1
+               button(class="popup-open" data-popup-id="popup-2") Открыть попап 2
+      
+      #popupOverlay
+      .popup#popup-1
+         form 1
+            input 
+            br
+            input
+
 
                      
                      
@@ -147,7 +161,15 @@
          </div>
       </div>
 
+      #popupOverlay
+      .popup#popup-2
+         form 2
+            input 
+            br
+            input
+
 
       <!-- <source srcset="..." type="image/svg+xml"> -->
+      script(src="js/common.js")
 </body>
 </html>

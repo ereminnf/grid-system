@@ -1,3 +1,7 @@
+body {
+  /*position: relative;*/
+}
+
 .news {
   margin: 0 auto;
   max-width: 1170px;
@@ -121,7 +125,30 @@
 }
 
 .news .static .info2 .info-block .info-block-body {
-  flex-grow: 0;
+  flex-grow: 1;
+}
+
+#popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(200, 200, 200, 0.2);
+  display: none;
+  z-index: 100;
+}
+
+.popup {
+  position: fixed;
+  z-index: 101;
+  width: 350px;
+  height: 300px;
+  background-color: #baa;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
 }
 
 @media screen and (max-width: 1280px) {
