@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
     popupsButon = document.getElementsByClassName('popup-open');
     for (var i = 0; i < popupsButon.length; i++) {
       popupsButon[i].onclick = function(){
+        document.body.setAttribute("style", "overflow-y: hidden;");
         popupOverlay.setAttribute("style", "display: block;");
         popupId = this.getAttribute("data-popup-id");        
         popupBody = document.getElementById(popupId); 
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function(){
         popupBody.removeAttribute("style");
       }
       popupOverlay.removeAttribute("style");
+      document.body.setAttribute("style", "overflow-y: visible;");
     }
   })(); 
 });

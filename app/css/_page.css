@@ -9,7 +9,7 @@
 body {
   background: #fff;
   color: #404040;
-  font-family: 'Segoe UI', sans-serif, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif, Arial, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: subpixel-antialiased !important;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
