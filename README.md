@@ -49,7 +49,7 @@
     .align, .align-(lg,md,sm,xs)(значение align-items);
   }
 ```
-  3.4 Работа с таблицой:
+  3.4 Работа с таблицей:
 ```php
   block-item{
     table{
